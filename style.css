@@ -168,7 +168,7 @@ html{
         top: 115%;
         right: 2rem;
         box-shadow: var(--box-shadow);
-        width: 33rem;
+        width: 20rem;
         border-radius: .5rem;
         border: 2px solid var(--Soft-Blue);
         background-color: #fff;
@@ -255,7 +255,6 @@ html{
     box-shadow: none;
     color: #fff;
 }
-
 
 
 
