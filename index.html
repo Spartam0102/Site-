@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon"href="/amco sans fond.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,32 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@<version>/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+          }
+        }
+      </script>
 </head>
 
+<script>
+import * as THREE from 'three';
+const mtlLoader = new MTLLoader();
+mtlLoader.loadMtl('bf748742-8378-4fe3-987c-72f9c87012d3.mtl', (mtl) => {
+  mtl.preload();
+  mtl.materials.Material.side = THREE.DoubleSide;
+  objLoader.setMaterials(mtl);
+  objLoader.load('bf748742-8378-4fe3-987c-72f9c87012d3.obj', (event) => {
+    const root = event.detail.loaderRootNode;
+    scene.add(root);
+    ...
+
+</script>
+
 <body>
+    <canvas id="c"></canvas>
     <!-- navbar sections starts  -->
     <header class="header">
         <div class="logo">
@@ -118,7 +142,7 @@
 
         <div class="box-container">
             <div class="box">
-                <iframe src='https://my.spline.design/untitled-75e86bef049ee246cd52b052852d7893/' frameborder='0' width='100%' height='100%'></iframe>
+                
                 
 
                 <h3>terrain adultes</h3>
@@ -150,15 +174,14 @@
                <h3>contact info</h3>
                <a href="#"><i class="fas fa-phone"></i>+123-456-789</a>
                <a href="#"><i class="fas fa-phone"></i>+111-222-3333</a>
-               <a href="#"><i class="fas fa-envelope"></i>company@example.com</a>
-               <a href="#"><i class="fas fa-envelope"></i>company@example.com</a>
+               <a href="#"><i class="fas fa-envelope"></i>clubamco45@gmail.com</a>
                <a href="#"><i class="fas fa-map-marker-alt"></i>Mumbai, india - 12345</a>
            </div>
 
            <div class="box">
                <h3>Suivez nous</h3>
                <a href="https://www.facebook.com/p/Amco-Motoclub-Orl%C3%A9anais-100054623821434/"><i class="fab fa-facebook-f"></i>facebook</a>
-               <a href=""><i class="fab fa-instagram"></i>instagram</a>
+               <a href=""><i class="https://www.instagram.com/amco_motoclub_orleanais/"></i>instagram</a>
 
            </div>
        </div>
